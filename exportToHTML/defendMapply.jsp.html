@@ -1,0 +1,207 @@
+<html>
+<head>
+<title>defendMapply.jsp</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: #999999; font-weight: normal; font-style: normal; }
+.s0 { color: rgb(249,39,114); }
+.s1 { color: rgb(246,246,246); }
+.s2 { color: rgb(255,255,255); }
+.s3 { color: rgb(254,151,32); }
+.s4 { color: rgb(230,218,116); }
+.s5 { color: rgb(254,151,32); }
+.s6 { color: rgb(230,218,116); }
+.s7 { color: rgb(128,128,128); }
+.s8 { color: rgb(249,250,244); }
+.s9 { color: rgb(255,255,255); }
+.s10 { color: rgb(249,39,114); }
+.s11 { color: rgb(255,235,12); }
+.s12 { color: rgb(249,250,244); }
+.s13 { color: rgb(174,129,255); }
+.s14 { color: rgb(174,129,255); }
+</style>
+</head>
+<BODY BGCOLOR="#1c1c1c">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+defendMapply.jsp</FONT>
+</center></TD></TR></TABLE>
+<pre>
+<span class="s0">&lt;html&gt;</span><span class="s1"> 
+</span><span class="s0">&lt;head&gt;</span><span class="s1"> 
+    </span><span class="s2">&lt;%@ </span><span class="s0">page </span><span class="s3">language</span><span class="s2">=&quot;</span><span class="s4">java</span><span class="s2">&quot; </span><span class="s3">contentType</span><span class="s2">=&quot;</span><span class="s4">text/html; charset=utf-8</span><span class="s2">&quot; 
+             </span><span class="s3">pageEncoding</span><span class="s2">=&quot;</span><span class="s4">utf-8</span><span class="s2">&quot;%&gt;</span><span class="s1"> 
+    </span><span class="s2">&lt;%@</span><span class="s0">page </span><span class="s3">import</span><span class="s2">=&quot;</span><span class="s4">java.util.List</span><span class="s2">&quot;%&gt;</span><span class="s1"> 
+    </span><span class="s2">&lt;%@</span><span class="s0">page </span><span class="s3">import</span><span class="s2">=&quot;</span><span class="s4">java.util.ArrayList</span><span class="s2">&quot;%&gt;</span><span class="s1"> 
+    </span><span class="s2">&lt;%@</span><span class="s0">page </span><span class="s3">import</span><span class="s2">=&quot;</span><span class="s4">bean.Proposer</span><span class="s2">&quot;%&gt;</span><span class="s1"> 
+    </span><span class="s0">&lt;meta </span><span class="s5">http-equiv=</span><span class="s6">&quot;Content-Type&quot; </span><span class="s5">content=</span><span class="s6">&quot;text/html; charset=utf-8&quot; </span><span class="s0">/&gt;</span><span class="s1"> 
+ 
+    </span><span class="s0">&lt;title&gt;</span><span class="s1">维护会议申请信息</span><span class="s0">&lt;/title&gt;</span><span class="s1"> 
+ 
+    </span><span class="s0">&lt;link </span><span class="s5">href=</span><span class="s6">&quot;../css/style.css&quot; </span><span class="s5">rel=</span><span class="s6">&quot;stylesheet&quot; </span><span class="s5">type=</span><span class="s6">&quot;text/css&quot; </span><span class="s0">/&gt;</span><span class="s1"> 
+    </span><span class="s0">&lt;link </span><span class="s5">href=</span><span class="s6">&quot;../css/extremecomponents.css&quot; </span><span class="s5">rel=</span><span class="s6">&quot;stylesheet&quot; </span><span class="s5">type=</span><span class="s6">&quot;text/css&quot;</span><span class="s0">&gt;</span><span class="s1"> 
+ 
+    </span><span class="s0">&lt;SCRIPT </span><span class="s5">language=</span><span class="s6">javascript </span><span class="s5">src=</span><span class="s6">&quot;../js/common.js&quot;</span><span class="s0">&gt;&lt;/SCRIPT&gt;</span><span class="s1"> 
+    </span><span class="s7">&lt;!-- 日历控件 --&gt;</span><span class="s1"> 
+    </span><span class="s0">&lt;script </span><span class="s5">language=</span><span class="s6">&quot;javascript&quot; </span><span class="s5">type=</span><span class="s6">&quot;text/javascript&quot; </span><span class="s5">src=</span><span class="s6">&quot;../My97DatePicker/WdatePicker.js&quot;</span><span class="s0">&gt;&lt;/script&gt;</span><span class="s1"> 
+    </span><span class="s7">&lt;!-- js分页 --&gt;</span><span class="s1"> 
+    </span><span class="s0">&lt;Script </span><span class="s5">Language=</span><span class="s6">&quot;JavaScript&quot; </span><span class="s5">type=</span><span class="s6">&quot;text/JavaScript&quot; </span><span class="s5">src=</span><span class="s6">&quot;../js/Page.js&quot;</span><span class="s0">&gt;&lt;/Script&gt;</span><span class="s1"> 
+    </span><span class="s7">&lt;!-- jQuery---双色表格 --&gt;</span><span class="s1"> 
+    </span><span class="s0">&lt;script </span><span class="s5">src=</span><span class="s6">&quot;../js/jquery-1.2.2.js&quot; </span><span class="s5">type=</span><span class="s6">&quot;text/javascript&quot;</span><span class="s0">&gt;&lt;/script&gt; &lt;script </span><span class="s5">type=</span><span class="s6">&quot;text/javascript&quot;</span><span class="s0">&gt;</span><span class="s1"> 
+    $</span><span class="s8">(</span><span class="s1">document</span><span class="s8">)</span><span class="s0">.</span><span class="s1">ready</span><span class="s8">(</span><span class="s0">function</span><span class="s8">(){  </span><span class="s7">//这个就是传说的ready</span><span class="s1"> 
+        $</span><span class="s8">(</span><span class="s6">&quot;.stripe tr&quot;</span><span class="s8">)</span><span class="s0">.</span><span class="s1">mouseover</span><span class="s8">(</span><span class="s0">function</span><span class="s8">(){  </span><span class="s7">//如果鼠标移到class为stripe的表格的tr上时，执行函数</span><span class="s1"> 
+            $</span><span class="s8">(</span><span class="s0">this</span><span class="s8">)</span><span class="s0">.</span><span class="s1">addClass</span><span class="s8">(</span><span class="s6">&quot;over&quot;</span><span class="s8">)</span><span class="s0">;</span><span class="s8">})</span><span class="s0">.</span><span class="s1">mouseout</span><span class="s8">(</span><span class="s0">function</span><span class="s8">(){   </span><span class="s7">//给这行添加class值为over，并且当鼠标一出该行时执行函数</span><span class="s1"> 
+            $</span><span class="s8">(</span><span class="s0">this</span><span class="s8">)</span><span class="s0">.</span><span class="s1">removeClass</span><span class="s8">(</span><span class="s6">&quot;over&quot;</span><span class="s8">)</span><span class="s0">;</span><span class="s8">})  </span><span class="s7">//移除该行的class</span><span class="s1"> 
+        $</span><span class="s8">(</span><span class="s6">&quot;.stripe tr:even&quot;</span><span class="s8">)</span><span class="s0">.</span><span class="s1">addClass</span><span class="s8">(</span><span class="s6">&quot;alt&quot;</span><span class="s8">)</span><span class="s0">;  </span><span class="s7">//给class为stripe的表格的偶数行添加class值为alt</span><span class="s1"> 
+    </span><span class="s8">})</span><span class="s0">;</span><span class="s1"> 
+</span><span class="s0">&lt;/script&gt;</span><span class="s1"> 
+ 
+</span><span class="s0">&lt;/head&gt;</span><span class="s1"> 
+</span><span class="s0">&lt;body&gt;</span><span class="s1"> 
+</span><span class="s7">&lt;!-- 当前位置div --&gt;</span><span class="s1"> 
+</span><span class="s0">&lt;div </span><span class="s5">id=</span><span class="s6">&quot;place&quot;</span><span class="s0">&gt;&lt;img </span><span class="s5">src=</span><span class="s6">&quot;../images/place_ico.gif&quot; </span><span class="s5">width=</span><span class="s6">&quot;31&quot; </span><span class="s5">height=</span><span class="s6">&quot;22&quot; </span><span class="s5">align=</span><span class="s6">&quot;absmiddle&quot; </span><span class="s0">/&gt;</span><span class="s1">当前位置： 行政办公 &gt;&gt; 公共事务管理 &gt;&gt; 会议管理</span><span class="s0">&lt;/div&gt;</span><span class="s1"> 
+ 
+</span><span class="s7">&lt;!-- 特殊页面所需要的帮助按钮div（如不需要可删除） --&gt;</span><span class="s1"> 
+</span><span class="s0">&lt;div </span><span class="s5">id=</span><span class="s6">&quot;help&quot; </span><span class="s5">align=</span><span class="s6">&quot;right&quot;</span><span class="s0">&gt;&lt;img </span><span class="s5">src=</span><span class="s6">&quot;../images/help_ico.gif&quot; </span><span class="s5">alt=</span><span class="s6">&quot;帮助&quot; </span><span class="s5">style=</span><span class="s6">&quot;</span><span class="s5">CURSOR</span><span class="s1">:</span><span class="s6">pointer&quot; </span><span class="s0">/&gt;&lt;/div&gt;</span><span class="s1"> 
+ 
+</span><span class="s7">&lt;!-- 内容区（控制所包含的div和table的宽度，包含在其中的div不用设宽度，默认即可，table的宽度设成100%。）--&gt;</span><span class="s1"> 
+</span><span class="s0">&lt;div </span><span class="s5">id=</span><span class="s6">&quot;content&quot;</span><span class="s0">&gt;</span><span class="s1"> 
+ 
+    </span><span class="s7">&lt;!-- 列表主标题div --&gt;</span><span class="s1"> 
+    </span><span class="s0">&lt;div </span><span class="s5">class=</span><span class="s6">&quot;mainTitle&quot;</span><span class="s0">&gt;&lt;img </span><span class="s5">src=</span><span class="s6">&quot;../images/bt1_ico.gif&quot; </span><span class="s5">width=</span><span class="s6">&quot;31&quot; </span><span class="s5">height=</span><span class="s6">&quot;23&quot; </span><span class="s5">align=</span><span class="s6">&quot;absmiddle&quot; </span><span class="s0">/&gt;</span><span class="s1">维护会议起草信息</span><span class="s0">&lt;/div&gt;</span><span class="s1"> 
+ 
+    </span><span class="s7">&lt;!-- 查询条件列表 --&gt;</span><span class="s1"> 
+    </span><span class="s0">&lt;table </span><span class="s5">class=</span><span class="s6">&quot;tableClass&quot; </span><span class="s5">width=</span><span class="s6">&quot;100%&quot; </span><span class="s5">border=</span><span class="s6">&quot;0&quot; </span><span class="s5">cellPadding=</span><span class="s6">&quot;0&quot; </span><span class="s5">cellspacing=</span><span class="s6">&quot;1&quot;</span><span class="s0">&gt;</span><span class="s1"> 
+        </span><span class="s0">&lt;form </span><span class="s5">class=</span><span class="s6">&quot;formClass&quot; </span><span class="s5">name=</span><span class="s6">&quot;myform&quot; </span><span class="s5">action=</span><span class="s6">&quot;&quot; </span><span class="s5">method=</span><span class="s6">&quot;post&quot; </span><span class="s5">target=</span><span class="s6">&quot;_blank&quot;</span><span class="s0">&gt;</span><span class="s1"> 
+            </span><span class="s0">&lt;tbody&gt;</span><span class="s1"> 
+            </span><span class="s9">&lt;%</span><span class="s2"> 
+                List</span><span class="s10">&lt;</span><span class="s2">Proposer</span><span class="s10">&gt; </span><span class="s2">pro </span><span class="s10">= </span><span class="s11">new </span><span class="s2">ArrayList</span><span class="s10">&lt;</span><span class="s2">Proposer</span><span class="s10">&gt;</span><span class="s12">()</span><span class="s10">;</span><span class="s2"> 
+                pro </span><span class="s10">= </span><span class="s12">(</span><span class="s2">List</span><span class="s10">&lt;</span><span class="s2">Proposer</span><span class="s10">&gt;</span><span class="s12">)</span><span class="s2">request</span><span class="s10">.</span><span class="s2">getAttribute</span><span class="s12">(</span><span class="s4">&quot;list&quot;</span><span class="s12">)</span><span class="s10">;</span><span class="s2"> 
+            </span><span class="s9">%&gt;</span><span class="s1"> 
+            </span><span class="s9">&lt;%</span><span class="s2"> 
+            Proposer pp </span><span class="s10">= </span><span class="s2">pro</span><span class="s10">.</span><span class="s2">get</span><span class="s12">(</span><span class="s2">pro</span><span class="s10">.</span><span class="s2">size</span><span class="s12">()</span><span class="s10">-</span><span class="s13">1</span><span class="s12">)</span><span class="s10">;</span><span class="s2"> 
+            </span><span class="s9">%&gt;</span><span class="s1"> 
+            </span><span class="s0">&lt;tr&gt;</span><span class="s1"> 
+                </span><span class="s0">&lt;td </span><span class="s5">class=</span><span class="s6">&quot;tdLabel&quot; </span><span class="s5">width=</span><span class="s6">&quot;15%&quot;</span><span class="s0">&gt;</span><span class="s1"> 
+                    </span><span class="s0">&lt;label </span><span class="s5">class=</span><span class="s6">&quot;label&quot;</span><span class="s0">&gt;</span><span class="s1">会议主题：</span><span class="s0">&lt;/label&gt;&lt;/td&gt;</span><span class="s1"> 
+                </span><span class="s0">&lt;td </span><span class="s5">class=</span><span class="s6">&quot;tdInput&quot; </span><span class="s5">width=</span><span class="s6">&quot;35%&quot;</span><span class="s0">&gt;&lt;input </span><span class="s5">id=</span><span class="s6">&quot;meet_theme&quot; </span><span class="s5">name=</span><span class="s6">&quot;meet_theme&quot; </span><span class="s5">value=</span><span class="s6">&quot;</span><span class="s9">&lt;%=</span><span class="s2">pp</span><span class="s10">.</span><span class="s2">getMeet_theme</span><span class="s12">()</span><span class="s9">%&gt;</span><span class="s6">&quot;</span><span class="s0">&gt;&lt;/td&gt;</span><span class="s1"> 
+                </span><span class="s0">&lt;td </span><span class="s5">width=</span><span class="s6">&quot;15%&quot; </span><span class="s5">class=</span><span class="s6">&quot;tdLabel&quot;</span><span class="s0">&gt;</span><span class="s1">会议创建人：</span><span class="s0">&lt;/td&gt;</span><span class="s1"> 
+                </span><span class="s0">&lt;td </span><span class="s5">class=</span><span class="s6">&quot;tdInput&quot; </span><span class="s5">width=</span><span class="s6">&quot;35%&quot;</span><span class="s0">&gt;</span><span class="s1"> 
+                    </span><span class="s0">&lt;input </span><span class="s5">id=</span><span class="s6">&quot;pro_name&quot; </span><span class="s5">name=</span><span class="s6">&quot;pro_name&quot; </span><span class="s5">value=</span><span class="s6">&quot;</span><span class="s9">&lt;%=</span><span class="s2">pp</span><span class="s10">.</span><span class="s2">getPro_name</span><span class="s12">()</span><span class="s9">%&gt;</span><span class="s6">&quot;</span><span class="s0">&gt;     &lt;/td&gt;</span><span class="s1"> 
+            </span><span class="s0">&lt;/tr&gt;</span><span class="s1"> 
+            </span><span class="s0">&lt;tr&gt;</span><span class="s1"> 
+                </span><span class="s0">&lt;td </span><span class="s5">class=</span><span class="s6">&quot;tdLabel&quot;</span><span class="s0">&gt;</span><span class="s1">会议时间：</span><span class="s0">&lt;/td&gt;</span><span class="s1"> 
+                </span><span class="s0">&lt;td </span><span class="s5">class=</span><span class="s6">&quot;tdInput&quot; </span><span class="s5">colspan=</span><span class="s6">&quot;3&quot;</span><span class="s0">&gt;&lt;input </span><span class="s5">name=</span><span class="s6">&quot;meet_time&quot; </span><span class="s5">type=</span><span class="s6">&quot;text&quot; </span><span class="s5">class=</span><span class="s6">&quot;Wdate&quot;  </span><span class="s5">id=</span><span class="s6">&quot;meet_time&quot;  </span><span class="s5">value=</span><span class="s6">&quot;</span><span class="s9">&lt;%=</span><span class="s2">pp</span><span class="s10">.</span><span class="s2">getMeet_time</span><span class="s12">()</span><span class="s9">%&gt;</span><span class="s6">&quot; </span><span class="s0">/&gt;&lt;/td&gt;</span><span class="s1"> 
+            </span><span class="s0">&lt;/tr&gt;</span><span class="s1"> 
+ 
+            </span><span class="s0">&lt;/tbody&gt;</span><span class="s1"> 
+        </span><span class="s0">&lt;/form&gt;</span><span class="s1"> 
+    </span><span class="s0">&lt;/table&gt;</span><span class="s1"> 
+ 
+    </span><span class="s7">&lt;!-- 查询条件列表所用的按钮 --&gt;</span><span class="s1"> 
+    </span><span class="s0">&lt;div </span><span class="s5">class=</span><span class="s6">&quot;queryButton&quot;</span><span class="s0">&gt;</span><span class="s1"> 
+        </span><span class="s0">&lt;a </span><span class="s5">href=</span><span class="s6">&quot;起草会议申请.html&quot;</span><span class="s0">&gt;&lt;img </span><span class="s5">src=</span><span class="s6">&quot;../images/btnAdd.gif&quot; </span><span class="s5">alt=</span><span class="s6">&quot;单击此按钮，新增信息&quot; </span><span class="s5">name=</span><span class="s6">&quot;查询&quot; </span><span class="s5">border=</span><span class="s6">&quot;0&quot; </span><span class="s5">type=</span><span class="s6">&quot;image&quot; </span><span class="s0">/&gt;&lt;/a&gt;</span><span class="s1"> 
+        </span><span class="s14">&amp;nbsp;&amp;nbsp;</span><span class="s0">&lt;img </span><span class="s5">name=</span><span class="s6">&quot;查询&quot; </span><span class="s5">type=</span><span class="s6">&quot;image&quot; </span><span class="s5">src=</span><span class="s6">&quot;../images/btnQuery.gif&quot; </span><span class="s5">alt=</span><span class="s6">&quot;单击此按钮，根据输入条件查询&quot; </span><span class="s0">/&gt;</span><span class="s1"> 
+        </span><span class="s14">&amp;nbsp;&amp;nbsp;</span><span class="s0">&lt;img </span><span class="s5">name=</span><span class="s6">&quot;清空&quot; </span><span class="s5">type=</span><span class="s6">&quot;image&quot; </span><span class="s5">src=</span><span class="s6">&quot;../images/btnClear.gif&quot;  </span><span class="s5">alt=</span><span class="s6">&quot;单击此按钮，请空已输入的查询条件&quot; </span><span class="s0">/&gt;  &lt;/div&gt;</span><span class="s1"> 
+ 
+    </span><span class="s7">&lt;!-- 查询条件与查询结果之间的间隔 --&gt;</span><span class="s1"> 
+    </span><span class="s0">&lt;div </span><span class="s5">class=</span><span class="s6">&quot;space&quot;</span><span class="s0">&gt;&lt;/div&gt;</span><span class="s1"> 
+ 
+    </span><span class="s7">&lt;!-- 查询结果列表 --&gt;</span><span class="s1"> 
+    </span><span class="s0">&lt;div </span><span class="s5">class=</span><span class="s6">eXtremeTable</span><span class="s0">&gt;</span><span class="s1"> 
+        </span><span class="s7">&lt;!-- 查询结果标题（右侧带页码） --&gt;</span><span class="s1"> 
+        </span><span class="s0">&lt;table </span><span class="s5">width=</span><span class="s6">&quot;100%&quot; </span><span class="s5">border=</span><span class="s6">&quot;0&quot; </span><span class="s5">cellspacing=</span><span class="s6">&quot;0&quot; </span><span class="s5">cellpadding=</span><span class="s6">&quot;0&quot;</span><span class="s0">&gt;</span><span class="s1"> 
+            </span><span class="s0">&lt;tr&gt;</span><span class="s1"> 
+                </span><span class="s0">&lt;td </span><span class="s5">class=</span><span class="s6">&quot;title&quot;</span><span class="s0">&gt;</span><span class="s14">&amp;nbsp;</span><span class="s0">&lt;/td&gt;</span><span class="s1"> 
+                </span><span class="s0">&lt;td </span><span class="s5">class=</span><span class="s6">&quot;statusBar&quot;</span><span class="s0">&gt;</span><span class="s1">找到2 条记录, 显示 1 到 2 </span><span class="s0">&lt;/td&gt;</span><span class="s1"> 
+                </span><span class="s0">&lt;td&gt;</span><span class="s1"> 
+ 
+                    </span><span class="s7">&lt;!-- 页码table(位于查询结果列表顶部居右)--&gt;</span><span class="s1"> 
+                    </span><span class="s0">&lt;table </span><span class="s5">border=</span><span class="s6">&quot;0&quot; </span><span class="s5">align=</span><span class="s6">&quot;right&quot; </span><span class="s5">cellPadding=</span><span class="s6">&quot;0&quot; </span><span class="s5">cellSpacing=</span><span class="s6">&quot;0&quot; </span><span class="s5">class=</span><span class="s6">&quot;toolbar&quot;</span><span class="s0">&gt;</span><span class="s1"> 
+                        </span><span class="s0">&lt;tbody&gt;</span><span class="s1"> 
+                        </span><span class="s0">&lt;tr&gt;</span><span class="s1"> 
+                            </span><span class="s0">&lt;td&gt;&lt;IMG </span><span class="s5">alt=</span><span class="s6">第一页 </span><span class="s5">src=</span><span class="s6">&quot;../images/firstPageDisabled.gif&quot;</span><span class="s0">&gt;&lt;/td&gt;</span><span class="s1"> 
+                            </span><span class="s0">&lt;td&gt;&lt;IMG </span><span class="s5">alt=</span><span class="s6">上一页 </span><span class="s5">src=</span><span class="s6">&quot;../images/prevPageDisabled.gif&quot;</span><span class="s0">&gt;&lt;/td&gt;</span><span class="s1"> 
+                            </span><span class="s0">&lt;td&gt;&lt;img </span><span class="s5">src=</span><span class="s6">&quot;../images/separator.gif&quot; </span><span class="s5">width=</span><span class="s6">&quot;2&quot; </span><span class="s5">height=</span><span class="s6">&quot;13&quot;</span><span class="s0">&gt;&lt;/td&gt;</span><span class="s1"> 
+                            </span><span class="s0">&lt;td&gt;</span><span class="s1">Page</span><span class="s0">&lt;input </span><span class="s5">type=</span><span class="s6">&quot;text&quot; </span><span class="s5">name=</span><span class="s6">&quot;textfield&quot; </span><span class="s5">class=</span><span class="s6">&quot;pageInput&quot;</span><span class="s0">&gt;</span><span class="s1"> 
+                                of 1</span><span class="s0">&lt;/td&gt;</span><span class="s1"> 
+                            </span><span class="s0">&lt;td&gt;&lt;img </span><span class="s5">src=</span><span class="s6">&quot;../images/separator.gif&quot; </span><span class="s5">width=</span><span class="s6">&quot;2&quot; </span><span class="s5">height=</span><span class="s6">&quot;13&quot;</span><span class="s0">&gt;&lt;/td&gt;</span><span class="s1"> 
+                            </span><span class="s0">&lt;td&gt;&lt;A </span><span class="s5">href=</span><span class="s6">&quot;javascript:document.forms.myForm.ec_p.value='2';document.forms.myForm.setAttribute('action','/webapp/oa/issueArticle!pagerIssueArticle.action');document.forms.myForm.setAttribute('method','post');document.forms.myForm.submit()&quot;</span><span class="s0">&gt;&lt;img </span><span class="s5">title=</span><span class="s6">&quot;下一页&quot; </span><span class="s5">alt=</span><span class="s6">&quot;下一页&quot; </span><span class="s5">src=</span><span class="s6">&quot;../images/nextPage.gif&quot; </span><span class="s5">border=</span><span class="s6">&quot;0&quot;</span><span class="s0">&gt;&lt;/A&gt;&lt;/td&gt;</span><span class="s1"> 
+                            </span><span class="s0">&lt;td&gt;&lt;A </span><span class="s5">href=</span><span class="s6">&quot;javascript:document.forms.myForm.ec_p.value='8';document.forms.myForm.setAttribute('action','/webapp/oa/issueArticle!pagerIssueArticle.action');document.forms.myForm.setAttribute('method','post');document.forms.myForm.submit()&quot;</span><span class="s0">&gt;&lt;img </span><span class="s5">title=</span><span class="s6">&quot;最后页&quot; </span><span class="s5">alt=</span><span class="s6">&quot;最后页&quot; </span><span class="s5">src=</span><span class="s6">&quot;../images/lastPage.gif&quot; </span><span class="s5">border=</span><span class="s6">&quot;0&quot;</span><span class="s0">&gt;&lt;/A&gt;&lt;/td&gt;</span><span class="s1"> 
+                        </span><span class="s0">&lt;/tr&gt;</span><span class="s1"> 
+                        </span><span class="s0">&lt;/tbody&gt;</span><span class="s1"> 
+                    </span><span class="s0">&lt;/table&gt;</span><span class="s1"> 
+ 
+ 
+                </span><span class="s0">&lt;/td&gt;</span><span class="s1"> 
+            </span><span class="s0">&lt;/tr&gt;</span><span class="s1"> 
+        </span><span class="s0">&lt;/table&gt;</span><span class="s1"> 
+ 
+        </span><span class="s7">&lt;!-- 查询结果列表信息 --&gt;</span><span class="s1"> 
+        </span><span class="s0">&lt;div </span><span class="s5">id=</span><span class="s6">&quot;queryResult&quot;</span><span class="s0">&gt;</span><span class="s1"> 
+            </span><span class="s0">&lt;table </span><span class="s5">width=</span><span class="s6">&quot;100%&quot; </span><span class="s5">border=</span><span class="s6">&quot;0&quot; </span><span class="s5">cellspacing=</span><span class="s6">&quot;1&quot; </span><span class="s5">cellpadding=</span><span class="s6">&quot;0&quot; </span><span class="s5">class=</span><span class="s6">&quot;stripe&quot;</span><span class="s0">&gt;</span><span class="s7">&lt;!--用class=&quot;stripe&quot;来标识需要使用 jQuery---双色表格效果--&gt;</span><span class="s1"> 
+                </span><span class="s0">&lt;thead&gt;</span><span class="s1"> 
+                </span><span class="s0">&lt;tr&gt;&lt;td </span><span class="s5">class=</span><span class="s6">&quot;tableHeader1&quot; </span><span class="s5">onMouseOver=</span><span class="s6">&quot;</span><span class="s0">this.</span><span class="s1">className</span><span class="s0">=</span><span class="s6">'tableHeaderSort1'</span><span class="s0">;this.</span><span class="s1">style</span><span class="s0">.</span><span class="s1">cursor</span><span class="s0">=</span><span class="s6">'pointer'&quot; </span><span class="s5">title=</span><span class="s6">&quot;排序 选择&quot; </span><span class="s5">onClick=</span><span class="s6">&quot;</span><span class="s1">javascript</span><span class="s0">:</span><span class="s1">document</span><span class="s0">.</span><span class="s1">forms</span><span class="s0">.</span><span class="s1">myForm</span><span class="s0">.</span><span class="s1">ec_s_id</span><span class="s0">.</span><span class="s1">value</span><span class="s0">=</span><span class="s6">'asc'</span><span class="s0">;</span><span class="s1">document</span><span class="s0">.</span><span class="s1">forms</span><span class="s0">.</span><span class="s1">myForm</span><span class="s0">.</span><span class="s1">ec_p</span><span class="s0">.</span><span class="s1">value</span><span class="s0">=</span><span class="s6">'1'</span><span class="s0">;</span><span class="s1">document</span><span class="s0">.</span><span class="s1">forms</span><span class="s0">.</span><span class="s1">myForm</span><span class="s0">.</span><span class="s1">setAttribute</span><span class="s8">(</span><span class="s6">'action'</span><span class="s0">,</span><span class="s6">'/webapp/oa/issueArticle!pagerIssueArticle.action'</span><span class="s8">)</span><span class="s0">;</span><span class="s1">document</span><span class="s0">.</span><span class="s1">forms</span><span class="s0">.</span><span class="s1">myForm</span><span class="s0">.</span><span class="s1">setAttribute</span><span class="s8">(</span><span class="s6">'method'</span><span class="s0">,</span><span class="s6">'post'</span><span class="s8">)</span><span class="s0">;</span><span class="s1">document</span><span class="s0">.</span><span class="s1">forms</span><span class="s0">.</span><span class="s1">myForm</span><span class="s0">.</span><span class="s1">submit</span><span class="s8">()</span><span class="s6">&quot; </span><span class="s5">onMouseOut=</span><span class="s6">&quot;</span><span class="s0">this.</span><span class="s1">className</span><span class="s0">=</span><span class="s6">'tableHeader1'</span><span class="s0">;this.</span><span class="s1">style</span><span class="s0">.</span><span class="s1">cursor</span><span class="s0">=</span><span class="s6">'default'&quot;</span><span class="s0">&gt;</span><span class="s1">选择</span><span class="s0">&lt;/td&gt;</span><span class="s1"> 
+                    </span><span class="s0">&lt;td </span><span class="s5">nowrap class=</span><span class="s6">&quot;tableHeader1&quot; </span><span class="s0">&gt;</span><span class="s1">会议主题</span><span class="s0">&lt;/td&gt;</span><span class="s1"> 
+                    </span><span class="s0">&lt;td </span><span class="s5">class=</span><span class="s6">&quot;tableHeader1&quot; </span><span class="s0">&gt;</span><span class="s1">会议时间</span><span class="s0">&lt;/td&gt;</span><span class="s1"> 
+                    </span><span class="s0">&lt;td </span><span class="s5">class=</span><span class="s6">&quot;tableHeader1&quot; </span><span class="s0">&gt;</span><span class="s1">发布状态</span><span class="s0">&lt;/td&gt;</span><span class="s1"> 
+                    </span><span class="s0">&lt;td </span><span class="s5">class=</span><span class="s6">&quot;tableHeader1&quot; </span><span class="s0">&gt;</span><span class="s1">操作</span><span class="s0">&lt;/td&gt;</span><span class="s1"> 
+ 
+                </span><span class="s0">&lt;/tr&gt;</span><span class="s1"> 
+                </span><span class="s0">&lt;/thead&gt;</span><span class="s1"> 
+ 
+                </span><span class="s0">&lt;tbody&gt;</span><span class="s1"> 
+                </span><span class="s9">&lt;%</span><span class="s2"> 
+                    </span><span class="s11">for </span><span class="s12">(</span><span class="s2">Proposer p </span><span class="s10">:</span><span class="s2">pro</span><span class="s12">)</span><span class="s2"> 
+                    </span><span class="s12">{</span><span class="s2"> 
+                </span><span class="s9">%&gt;</span><span class="s1"> 
+                </span><span class="s0">&lt;tr&gt;&lt;td </span><span class="s5">align=</span><span class="s6">&quot;center&quot;</span><span class="s0">&gt;&lt;input </span><span class="s5">type=</span><span class="s6">&quot;checkbox&quot; </span><span class="s5">value=</span><span class="s6">&quot;4162&quot; </span><span class="s5">name=</span><span class="s6">&quot;deleteCheck&quot;</span><span class="s0">&gt;&lt;/td&gt;</span><span class="s1"> 
+                    </span><span class="s0">&lt;td&gt;</span><span class="s9">&lt;%=</span><span class="s2">p</span><span class="s10">.</span><span class="s2">getMeet_theme</span><span class="s12">()</span><span class="s9">%&gt;</span><span class="s0">&lt;/td&gt;</span><span class="s1"> 
+                    </span><span class="s0">&lt;td&gt;</span><span class="s9">&lt;%=</span><span class="s2">p</span><span class="s10">.</span><span class="s2">getMeet_time</span><span class="s12">()</span><span class="s9">%&gt;</span><span class="s0">&lt;/td&gt;</span><span class="s1"> 
+                    </span><span class="s0">&lt;td&gt;</span><span class="s9">&lt;%=</span><span class="s2">p</span><span class="s10">.</span><span class="s2">getMeet_static</span><span class="s12">()</span><span class="s9">%&gt;</span><span class="s0">&lt;/td&gt;</span><span class="s1"> 
+                    </span><span class="s0">&lt;td&gt;&lt;a </span><span class="s5">href=</span><span class="s6">&quot;修改会议申请.html&quot; </span><span class="s5">style=</span><span class="s6">&quot;</span><span class="s5">margin-right</span><span class="s1">: </span><span class="s14">10</span><span class="s6">px&quot;</span><span class="s0">&gt;</span><span class="s1">修改</span><span class="s0">&lt;/a&gt;&lt;a </span><span class="s5">href=</span><span class="s6">&quot;新增会议室预定信息.html&quot;</span><span class="s0">&gt;</span><span class="s1">申请会议室</span><span class="s0">&lt;/a&gt;&lt;/td&gt;</span><span class="s1"> 
+                </span><span class="s0">&lt;/tr&gt;</span><span class="s1"> 
+                </span><span class="s9">&lt;%</span><span class="s12">}</span><span class="s9">%&gt;</span><span class="s1"> 
+                </span><span class="s0">&lt;/tbody&gt;</span><span class="s1"> 
+            </span><span class="s0">&lt;/table&gt;</span><span class="s1"> 
+            </span><span class="s7">&lt;!-- jQuery---双色表格 --&gt;</span><span class="s1"> 
+            </span><span class="s0">&lt;script </span><span class="s5">type=</span><span class="s6">&quot;text/javascript&quot;</span><span class="s0">&gt;</span><span class="s1"> 
+                $</span><span class="s8">(</span><span class="s1">document</span><span class="s8">)</span><span class="s0">.</span><span class="s1">ready</span><span class="s8">(</span><span class="s0">function</span><span class="s8">(){</span><span class="s1"> 
+                    $</span><span class="s8">(</span><span class="s6">'a.affLink'</span><span class="s8">)</span><span class="s0">.</span><span class="s1">mouseover</span><span class="s8">(</span><span class="s0">function</span><span class="s8">(){</span><span class="s1">window</span><span class="s0">.</span><span class="s1">status</span><span class="s0">=this.</span><span class="s1">title</span><span class="s0">;return true;</span><span class="s8">})</span><span class="s1"> 
+                        </span><span class="s0">.</span><span class="s1">mouseout</span><span class="s8">(</span><span class="s0">function</span><span class="s8">(){</span><span class="s1">window</span><span class="s0">.</span><span class="s1">status</span><span class="s0">=</span><span class="s6">'Done'</span><span class="s0">;return true;</span><span class="s8">})</span><span class="s0">;</span><span class="s1"> 
+                </span><span class="s8">})</span><span class="s0">;</span><span class="s1"> 
+            </span><span class="s0">&lt;/script&gt;</span><span class="s1"> 
+        </span><span class="s0">&lt;/div&gt;</span><span class="s1"> 
+ 
+        </span><span class="s7">&lt;!-- 页码table(位于查询结果列表底部居右) --&gt;</span><span class="s1"> 
+        </span><span class="s0">&lt;div </span><span class="s5">class=</span><span class="s6">&quot;pageBottom&quot; </span><span class="s0">&gt;</span><span class="s1"> 
+            </span><span class="s0">&lt;table </span><span class="s5">border=</span><span class="s6">&quot;0&quot; </span><span class="s5">align=</span><span class="s6">&quot;right&quot; </span><span class="s5">cellPadding=</span><span class="s6">&quot;0&quot; </span><span class="s5">cellSpacing=</span><span class="s6">&quot;0&quot; </span><span class="s5">class=</span><span class="s6">&quot;toolbar&quot;</span><span class="s0">&gt;</span><span class="s1"> 
+                </span><span class="s0">&lt;tbody&gt;</span><span class="s1"> 
+                </span><span class="s0">&lt;tr&gt;</span><span class="s1"> 
+                    </span><span class="s0">&lt;td&gt;&lt;IMG </span><span class="s5">alt=</span><span class="s6">第一页 </span><span class="s5">src=</span><span class="s6">&quot;../images/firstPageDisabled.gif&quot;</span><span class="s0">&gt;&lt;/td&gt;</span><span class="s1"> 
+                    </span><span class="s0">&lt;td&gt;&lt;IMG </span><span class="s5">alt=</span><span class="s6">上一页 </span><span class="s5">src=</span><span class="s6">&quot;../images/prevPageDisabled.gif&quot;</span><span class="s0">&gt;&lt;/td&gt;</span><span class="s1"> 
+                    </span><span class="s0">&lt;td&gt;&lt;img </span><span class="s5">src=</span><span class="s6">&quot;../images/separator.gif&quot; </span><span class="s5">width=</span><span class="s6">&quot;2&quot; </span><span class="s5">height=</span><span class="s6">&quot;13&quot;</span><span class="s0">&gt;&lt;/td&gt;</span><span class="s1"> 
+                    </span><span class="s0">&lt;td&gt;</span><span class="s1">Page</span><span class="s0">&lt;input </span><span class="s5">type=</span><span class="s6">&quot;text&quot; </span><span class="s5">name=</span><span class="s6">&quot;textfield&quot; </span><span class="s5">class=</span><span class="s6">&quot;pageInput&quot;</span><span class="s0">&gt;</span><span class="s1"> 
+                        of 1</span><span class="s0">&lt;/td&gt;</span><span class="s1"> 
+                    </span><span class="s0">&lt;td&gt;&lt;img </span><span class="s5">src=</span><span class="s6">&quot;../images/separator.gif&quot; </span><span class="s5">width=</span><span class="s6">&quot;2&quot; </span><span class="s5">height=</span><span class="s6">&quot;13&quot;</span><span class="s0">&gt;&lt;/td&gt;</span><span class="s1"> 
+                    </span><span class="s0">&lt;td&gt;&lt;A </span><span class="s5">href=</span><span class="s6">&quot;javascript:document.forms.myForm.ec_p.value='2';document.forms.myForm.setAttribute('action','/webapp/oa/issueArticle!pagerIssueArticle.action');document.forms.myForm.setAttribute('method','post');document.forms.myForm.submit()&quot;</span><span class="s0">&gt;&lt;img </span><span class="s5">title=</span><span class="s6">&quot;下一页&quot; </span><span class="s5">alt=</span><span class="s6">&quot;下一页&quot; </span><span class="s5">src=</span><span class="s6">&quot;../images/nextPage.gif&quot; </span><span class="s5">border=</span><span class="s6">&quot;0&quot;</span><span class="s0">&gt;&lt;/A&gt;&lt;/td&gt;</span><span class="s1"> 
+                    </span><span class="s0">&lt;td&gt;&lt;A </span><span class="s5">href=</span><span class="s6">&quot;javascript:document.forms.myForm.ec_p.value='8';document.forms.myForm.setAttribute('action','/webapp/oa/issueArticle!pagerIssueArticle.action');document.forms.myForm.setAttribute('method','post');document.forms.myForm.submit()&quot;</span><span class="s0">&gt;&lt;img </span><span class="s5">title=</span><span class="s6">&quot;最后页&quot; </span><span class="s5">alt=</span><span class="s6">&quot;最后页&quot; </span><span class="s5">src=</span><span class="s6">&quot;../images/lastPage.gif&quot; </span><span class="s5">border=</span><span class="s6">&quot;0&quot;</span><span class="s0">&gt;&lt;/A&gt;&lt;/td&gt;</span><span class="s1"> 
+                </span><span class="s0">&lt;/tr&gt;</span><span class="s1"> 
+                </span><span class="s0">&lt;/tbody&gt;</span><span class="s1"> 
+            </span><span class="s0">&lt;/table&gt;</span><span class="s1"> 
+        </span><span class="s0">&lt;/div&gt;</span><span class="s1"> 
+ 
+ 
+        </span><span class="s7">&lt;!-- 查询结果底部按钮 --&gt;</span><span class="s1"> 
+        </span><span class="s0">&lt;div </span><span class="s5">class=</span><span class="s6">&quot;queryResultButton&quot;</span><span class="s0">&gt;</span><span class="s1"> 
+            </span><span class="s14">&amp;nbsp;</span><span class="s0">&lt;input </span><span class="s5">onClick=</span><span class="s6">&quot;</span><span class="s1">checkAll</span><span class="s8">(</span><span class="s0">this, </span><span class="s6">'deleteCheck'</span><span class="s8">)</span><span class="s6">&quot; </span><span class="s5">type=</span><span class="s6">&quot;checkbox&quot; </span><span class="s5">name=</span><span class="s6">&quot;selectAll&quot;</span><span class="s0">&gt;</span><span class="s1">是否全选 
+            </span><span class="s14">&amp;nbsp;</span><span class="s0">&lt;input </span><span class="s5">onClick=</span><span class="s6">&quot;</span><span class="s1">deleteSelected</span><span class="s8">(</span><span class="s6">'selectFiles'</span><span class="s0">,</span><span class="s6">'receivedFileCheck'</span><span class="s8">)</span><span class="s0">;</span><span class="s6">&quot; </span><span class="s5">src=</span><span class="s6">&quot;../images/btnDelete.gif&quot; </span><span class="s5">alt=</span><span class="s6">&quot;删除&quot; </span><span class="s5">name=</span><span class="s6">&quot;imageField33&quot; </span><span class="s5">type=</span><span class="s6">&quot;image&quot; </span><span class="s0">/&gt;</span><span class="s1"> 
+        </span><span class="s0">&lt;/div&gt;</span><span class="s1"> 
+    </span><span class="s0">&lt;/div&gt;</span><span class="s1"> 
+</span><span class="s0">&lt;/div&gt;</span><span class="s1"> 
+</span><span class="s0">&lt;/body&gt;</span><span class="s1"> 
+</span><span class="s0">&lt;/html&gt;</span><span class="s1"> 
+</span></pre>
+</body>
+</html>

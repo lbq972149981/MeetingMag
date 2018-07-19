@@ -1,0 +1,29 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/xml; charset=utf-8" />
+<title>My97DatePicker</title>
+<script type="text/javascript" src="config.js"></script>
+<script>	
+var $c, $d, $dp = parent.$dp, $dt, $tdt, $sdt, $lastInput, $FF = $dp.ff, $ny;
+if (parent == window) {
+}
+else {	
+    var l = $dp.lang;
+    if (l == 'auto') {
+        l = $FF ? navigator.language.toLowerCase() : navigator.browserLanguage.toLowerCase();
+    }
+    l = $getCurr(langList, l);
+    document.write("<script src='lang/" + l.name + ".js' charset='" + l.charset + "'><\/script>");
+    for (var i = 0; i < skinList.length; i++) {
+        document.write('<link rel="stylesheet" type="text/css" href="skin/' + skinList[i].name + '/datepicker.css" title="' + skinList[i].name + '" charset="' + skinList[i].charset + '" disabled="true"/>');
+    }
+}
+</script>
+<script type="text/javascript" src="calendar.js" charset="gb2312"></script>
+</head>
+<body leftmargin="0" topmargin="0">	
+</body>
+</html>
+<script>
+var cc=new My97DP();
+</script>

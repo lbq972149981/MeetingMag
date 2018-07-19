@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="GB2312" ?>
+<root text="ROOT" open-action="true">
+<menu id="1"    text="系统管理员">
+<menu  id="11"  text="菜单管理">
+<menu id="1111" href="javascript:goifram('content1.html')"  text="菜单组管理"></menu>
+<menu id="1112" href="javascript:goifram('标签.html')"  text="标签"></menu>
+<menu id="1113" href="javascript:goifram('content1.html')"  text="资源管理"></menu>
+</menu>
+<menu  id="112"  text="角色管理">
+<menu id="1121" href="javascript:goifram('content1.html')"  text="角色资源管理"></menu>
+<menu id="1122" href="javascript:goifram('content1.html')"  text="角色管理"></menu>
+<menu id="1123" href="javascript:goifram('content1.html')"  text="角色分配"></menu>
+</menu>
+<menu  id="113"  text="用户管理">
+<menu id="1121" href="javascript:goifram('content1.html')"  text="角色资源管理"></menu>
+<menu id="1122" href="javascript:goifram('content1.html')"  text="角色管理"></menu>
+<menu id="1123" href="javascript:goifram('content1.html')"  text="角色分配"></menu>
+</menu>
+</menu>
+<menu id="2" url="index.htm"  text="应用管理员">
+<menu id="1121" href="javascript:goifram('content1.html')"  text="角色资源管理"></menu>
+<menu id="1122" href="javascript:goifram('content1.html')"  text="角色管理"></menu>
+<menu id="1123" href="javascript:goifram('content1.html')"  text="角色分配"></menu>
+</menu>
+<menu id="3"   text="一般用户" width="180" textOverColor="blue">
+<menu id="1121" href="javascript:goifram('content1.html')"  text="角色资源管理"></menu>
+<menu id="1122" href="javascript:goifram('content1.html')"  text="角色管理"></menu>
+<menu id="1123" href="javascript:goifram('content1.html')"  text="角色分配"></menu>
+</menu>
+<menu id="4"  icon="images/r_earth.gif"  text="X4">
+<menu id="1121" href="javascript:goifram('content1.html')"  text="角色资源管理"></menu>
+<menu id="1122" href="javascript:goifram('content1.html')"  text="角色管理"></menu>
+<menu id="1123" href="javascript:goifram('content1.html')"  text="角色分配"></menu>
+</menu>
+<menu id="5" icon="images/r_mushroom.gif"  text="X5">
+<menu id="1121" href="javascript:goifram('content1.html')"  text="角色资源管理"></menu>
+<menu id="1122" href="javascript:goifram('content1.html')"  text="角色管理"></menu>
+<menu id="1123" href="javascript:goifram('content1.html')"  text="角色分配"></menu>
+</menu>
+<menu id="6"  icon="images/r_write.gif"  text="X6">
+<menu id="61"  icon="images/r_write.gif"  text="X61">
+<menu id="611"  icon="images/r_write.gif"  text="X611">
+<menu id="6111" href="javascript:goifram('welcome.htm')"  text="welcome"></menu>
+<menu id="6112" href="javascript:goifram('welcome.htm')"  text="welcome"></menu>
+</menu>
+</menu>
+</menu>
+
+</root>

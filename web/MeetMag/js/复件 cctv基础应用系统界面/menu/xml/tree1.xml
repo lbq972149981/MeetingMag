@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="GB2312" ?> 
+<root text="ROOT" open-action="true">
+<menu id="1" text="档案管理">
+<menu id="14" text="2005年">
+<menu id="1a" href="javascript:goframe('../content2.htm')" text="科技" target="body"/> 
+<menu id="2a" href="javascript:goframe('../content3.htm')" text="统计" /> 
+<menu id="3a" href="javascript:goframe('../content4.htm')" text="数据管理" /> 
+<menu id="4a" href="javascript:goframe('../content5.htm')" text="分析资料" /> 
+</menu>
+<menu id="15" text="统计公布">
+<menu id="151" url="index.htm" text="数据分析" /> 
+<menu id="152" url="index.htm" text="数据查询" /> 
+<menu id="153" url="index.htm" text="数据管理" /> 
+<menu id="154" url="index.htm" text="分析资料" /> 
+<menu id="155" url="index.htm" text="城市调查" /> 
+<menu id="156" url="index.htm" text="企业调查" /> 
+<menu id="157" url="index.htm" text="农村调查" /> 
+<menu id="157" url="index.htm" text="农村调查" /> 
+<menu id="157" url="index.htm" text="农村调查" /> 
+<menu id="157" url="index.htm" text="农村调查" /> 
+<menu id="157" url="index.htm" text="农村调查" /> 
+<menu id="157" url="index.htm" text="农村调查" /> 
+<menu id="157" url="index.htm" text="农村调查" /> 
+<menu id="157" url="index.htm" text="农村调查" /> 
+<menu id="157" url="index.htm" text="农村调查" /> 
+<menu id="157" url="index.htm" text="农村调查" /> 
+<menu id="157" url="index.htm" text="农村调查" /> 
+<menu id="157" url="index.htm" text="农村调查" /> 
+<menu id="157" url="index.htm" text="农村调查" /> 
+<menu id="157" url="index.htm" text="农村调查" /> 
+<menu id="157" url="index.htm" text="农村调查" /> 
+<menu id="157" url="index.htm" text="农村调查农村调查农村调查农村调查农村调查农村调查" /> 
+</menu>
+</menu>
+<menu id="a" text="2005年">
+<menu id="aa" href="javascript:goframe('../content2.htm')" text="科技" target="body"/> 
+<menu id="aaa" href="javascript:goframe('../content3.htm')" text="统计" /> 
+<menu id="aaaa" href="javascript:goframe('../content4.htm')" text="数据管理" /> 
+<menu id="aaaaa" href="javascript:goframe('../content5.htm')" text="分析资料" /> 
+</menu>
+
+
+</root>

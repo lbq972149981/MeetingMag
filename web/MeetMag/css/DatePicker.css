@@ -1,0 +1,212 @@
+td {
+    font-size:12px
+}
+.datePickerContainer {
+	WIDTH: 180px}/* needed for proper user styling */
+.calendarContainer {
+	width: 100%;
+}
+.calendarBodyContainer {
+	WIDTH: 100%;
+	background-color: #FFFFFF;
+	border: 1px solid #9DC0D2;
+}
+.calendarBodyContainer THEAD TR TD {
+	COLOR: #2F4D68;
+	TEXT-ALIGN: center;
+	font-size: 12px;
+	padding: 3px;
+	background-color: #B7E7F9;
+	font-weight: bold;
+}
+.calendarBodyContainer TBODY TR TD {
+	CURSOR: hand;
+	TEXT-ALIGN: center;
+	font-size: 12px;
+	padding: 3px;
+}
+.monthWrapper {
+}
+.monthContainer {
+	WIDTH: 100%;
+	height: 28px;
+}
+.monthLabelContainer {
+	BACKGROUND: url(../images/dpMonthBg.gif) repeat-x left top;
+	COLOR: #293a4b;
+	TEXT-ALIGN: center;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 28px;
+}
+.month {
+	font-size: 12px;
+	padding-top: 5px;
+}
+.monthCurve {
+}
+.monthCurveTL {
+	BACKGROUND: url(../images/dpCurveTL.gif) no-repeat left top;
+	width: 7px;
+}
+.monthCurveTR {
+	BACKGROUND: url(../images/dpCurveTR.gif) no-repeat right top;
+	width: 7px;
+}
+.yearWrapper {
+	background-image: url(../images/dpYearBg.gif);
+	background-repeat: repeat-x;
+	background-position: left top;
+}
+.yearContainer {
+	WIDTH: 100%;
+	height: 25px;
+}
+.yearContainer TD {
+
+}
+.yearContainer .yearLabel {
+	COLOR: #fff;
+	TEXT-ALIGN: center;
+	font-size: 12em;
+	font-weight: bold;
+	height: 22px;
+	padding-top: 4px;
+	margin-top: 1px;
+	margin-right: 0px;
+	margin-bottom: 1px;
+	margin-left: 0px;
+	padding-bottom: 1px;
+}
+.curveBL {
+	MARGIN: 0px;
+	WIDTH: 7px! important;
+	padding: 0px;
+	background-image: url(../images/dpCurveBL.gif);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+}
+.curveBR {
+	MARGIN: 0px;
+	WIDTH: 7px! important;
+	background-image: url(../images/dpCurveBR.gif);
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	padding: 0px;
+}
+.previousMonth {
+	BACKGROUND-COLOR: #F8FAFC! important;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #9DC0D2;
+	border-right-color: #9DC0D2;
+	border-bottom-color: #FFFFFF;
+	border-left-color: #FFFFFF;
+}
+.previousMonthDisabled {
+	CURSOR: default! important; BACKGROUND-COLOR: #C5C6C7! important
+}
+.currentMonth {
+	font-size: 12px;
+	color: #006699;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #9DC0D2;
+	border-right-color: #9DC0D2;
+	border-bottom-color: #FFFFFF;
+	border-left-color: #FFFFFF;
+	background-color: #D7E8F2;
+	font-weight: bold;
+}
+.currentMonthDisabled {
+	CURSOR: default! important; BACKGROUND-COLOR: #DFDFDF! important
+}
+.nextMonth {
+	BACKGROUND-COLOR: #F8FAFC! important;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #9DC0D2;
+	border-right-color: #9DC0D2;
+	border-bottom-color: #FFFFFF;
+	border-left-color: #FFFFFF;
+}
+.nextMonthDisabled {
+	CURSOR: default! important; BACKGROUND-COLOR: #C5C6C7! important
+}
+.currentDate {
+	font-size: 12px;
+	color: #FFFFFF;
+	background-color: #539EB5;
+}
+.selectedItem {
+	COLOR: #6782a8! important; BACKGROUND-COLOR: #fff! important
+}
+.yearLabel .selectedYear {
+	BACKGROUND-COLOR: #C0E9F9! important;
+	font-size: 12px;
+	color: #2F4D68;
+	padding-top: 3px;
+	padding-right: 5px;
+	padding-bottom: 3px;
+	padding-left: 5px;
+}
+.nextYear {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; CURSOR: hand; PADDING-TOP: 0px
+}
+.previousYear {
+	PADDING-RIGHT: 0px;
+	PADDING-LEFT: 0px;
+	PADDING-BOTTOM: 0px;
+	CURSOR: hand;
+	PADDING-TOP: 0px;
+	font-size: 12px;
+	color: #2F4D68;
+	font-weight: normal;
+}
+.nextYear {
+	font-size: 12px;
+	font-weight: normal;
+	color: #2F4D68;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 8px;
+}
+.previousYear {
+	margin-top: 0px;
+	margin-right: 8px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+}
+.incrementControl {
+	WIDTH: 1em; CURSOR: hand
+}
+.increase {
+	FLOAT: right;
+	padding-top: 6px;
+}
+.decrease {
+	FLOAT: left;
+	padding-top: 6px;
+}
+.lastColumn {
+	BACKGROUND-IMAGE: none! important
+}

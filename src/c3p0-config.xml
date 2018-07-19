@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c3p0-config>
+        <named-config name="mysqlId">
+                <property name="driverClass">com.mysql.jdbc.Driver</property>
+                <property name="jdbcUrl">jdbc:mysql://127.0.0.1:3306/meetingmanage</property>
+                <property name="user">root</property>
+                <property name="password">root</property>
+                <!--初始化时获取10个连接，取值应在minPoolSize与maxPoolSize之间。Default: 3 -->
+                <property name="initialPoolSize">5</property>
+                <!--最大空闲时间,60秒内未使用则连接被丢弃。若为0则永不丢弃。Default: 0 -->
+                <property name="maxIdleTime">60</property>
+                <!--连接池中保留的最大连接数。Default: 15 -->
+                <property name="maxPoolSize">10</property>
+                <!--连接池中保留的最小连接数。Default: 15 -->
+                <property name="minPoolSize">2</property>
+                <!--JDBC的标准参数，用以控制数据源内加载的PreparedStatements数量。但由于预缓存的statements
+            属于单个connection而不是整个连接池。所以设置这个参数需要考虑到多方面的因素。
+            如果maxStatements与maxStatementsPerConnection均为0，则缓存被关闭。Default: 0-->
+                <property name="maxStatements">200</property>
+        </named-config>
+</c3p0-config>

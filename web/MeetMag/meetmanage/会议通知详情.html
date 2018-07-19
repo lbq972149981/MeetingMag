@@ -1,0 +1,91 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>会议通知详情</title>
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<link href="../css/extremecomponents.css" rel="stylesheet" type="text/css">
+<SCRIPT language=javascript src="../js/common.js"></SCRIPT>
+<!-- 日历控件 -->
+<script language="javascript" type="text/javascript" src="../My97DatePicker/WdatePicker.js"></script>
+<!-- js分页 -->
+<Script Language="JavaScript" type="text/JavaScript" src="../js/Page.js"></Script>
+<!-- jQuery---双色表格 -->
+<script src="../js/jquery-1.2.2.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function(){  //这个就是传说的ready
+  $(".stripe tr").mouseover(function(){  //如果鼠标移到class为stripe的表格的tr上时，执行函数
+$(this).addClass("over");}).mouseout(function(){   //给这行添加class值为over，并且当鼠标一出该行时执行函数
+					$(this).removeClass("over");})  //移除该行的class
+  $(".stripe tr:even").addClass("alt");  //给class为stripe的表格的偶数行添加class值为alt
+});
+</script>
+</head>
+<body>
+<!-- 当前位置div -->
+<div id="place"><img src="../images/place_ico.gif" width="31" height="22" align="absmiddle" />当前位置： 行政办公 >> 公共事务管理 >> 会议管理</div>
+<!-- 特殊页面所需要的帮助按钮div（如不需要可删除） -->
+<div id="help" align="right"><img src="../images/help_ico.gif" alt="帮助" style="CURSOR:pointer" /></div>
+<!-- 内容区（控制所包含的div和table的宽度，包含在其中的div不用设宽度，默认即可，table的宽度设成100%。）-->
+<div id="content">
+<!-- 列表主标题div -->
+<div class="mainTitle"><img src="../images/bt1_ico.gif" width="31" height="23" align="absmiddle" />已发布会议通知详情</div>
+<!-- 查询条件列表 -->
+<table class="tableClass" width="106%" border="0" cellpadding="0" cellspacing="1">
+  <form class="formClass" name="myform" action="" method="post" target="_blank">
+    <tbody>
+      <tr>
+        <td class="tdLabel" width="15%"><label class="label">会议类型：</label></td>
+        <td class="tdInput" width="35%">专业会议</td>
+        <td class="tdLabel" width="15%"><label class="label">会议名称：</label></td>
+        <td class="tdInput" width="35%">十七大学习报告</td>
+      </tr>
+      <tr>
+        <td class="tdLabel" ><label class="label">会议主持人：</label></td>
+        <td class="tdInput">李强</td>
+        <td class="tdLabel" ><label class="label">紧急程度：</label></td>
+        <td class="tdInput" align="left">紧急</td>
+      </tr>
+      <tr>
+        <td class="tdLabel" ><label class="label">会议时间：</label></td>
+        <td class="tdInput">2008-7-11 11:08:41</td>
+        <td class="tdLabel" ><label class="label">会议起草人：</label></td>
+        <td class="tdInput" align="left">王坤</td>
+      </tr>
+      <tr>
+        <td class="tdLabel" ><label class="label">与会领导：</label></td>
+        <td class="tdInput">赵光良、王强</td>
+        <td class="tdLabel" ><label class="label">主要参加人员：</label></td>
+        <td class="tdInput" align="left">马小华</td>
+      </tr>
+      <tr>
+        <td class="tdLabel" ><label class="label">召集部门：</label></td>
+        <td class="tdInput" >行政处</td>
+        <td class="tdLabel"><label class="label">会议日程安排：</label></td>
+        <td class="tdInput" ></td>
+      </tr>
+      <tr>
+        <td class="tdLabel">会议主题：</td>
+        <td class="tdInput" colspan="3">十七大学习报告</td>
+      </tr>
+      <tr>
+        <td class="tdLabel">会议内容：</td>
+        <td class="tdInput" colspan="3">胡同志代表十六届中央委员会所作的报告，顺应时代潮流，符合党心民心 </td>
+      </tr>
+      <tr>
+        <td class="tdLabel" ><label class="label">会议室名称：</label></td>
+        <td class="tdInput">第七会议室</td>
+        <td class="tdLabel">会议准备材料：</td>
+        <td class="tdInput"><a href="#">图片.jpg</a></td>
+      </tr>
+    </tbody>
+  </form>
+</table>
+<!-- 查询条件列表所用的按钮 -->
+<div class="queryButton">
+  <a href="回执信息详情.html"><img src="../images/btnHuiZhiInfo.gif"  alt="单击此按钮，查看回执信息" name="查看回执信息" border="0" id="查看回执信息" type="image" /></a>
+  &nbsp;&nbsp;
+  <a href="会议通知管理.html"><img src="../images/btnBack.gif"  alt="单击此按钮，返回上一页" name="返回" border="0" type="image" /></a></div>
+<div class="space"></div>
+<div class=eXtremeTable> </div>
+</body>
+</html>

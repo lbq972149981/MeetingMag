@@ -1,0 +1,26 @@
+.pkg H3 {
+	PADDING-LEFT: 34px; FONT: 12px verdana,helvetica,tahoma,sans-serif; CURSOR: pointer; HEIGHT: 18px
+}
+H3.collapser-expanded {
+	BACKGROUND: url(../images/pkg-open.gif) #fff no-repeat 0px -1px
+}
+H3.collapser-collapsed {
+	BACKGROUND: url(../images/pkg-closed.gif) #fff no-repeat 0px -1px
+}
+.pkg-body {
+	FONT: 12px verdana,helvetica,tahoma,sans-serif; MARGIN-LEFT: 16px
+}
+#classes {
+	background-image: url(../images/tree_bg.jpg);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+}
+#classes A {
+	DISPLAY: block; PADDING-LEFT: 34px; BACKGROUND: url(../images/class.gif) #fff no-repeat 16px -1px; FONT: 12px verdana,helvetica,tahoma,sans-serif; COLOR: black; WHITE-SPACE: nowrap; HEIGHT: 18px; TEXT-DECORATION: none; moz-outline: none; outline: none
+}
+#classes A:hover {
+	TEXT-DECORATION: underline
+}
+#classes A.ex {
+	BACKGROUND: url(../images/example.gif) #fff no-repeat 16px -1px
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NoMouse</title>
+    <script>
+        function OnMouseOverFunction() {
+            var oDiv1 = document.getElementById("div1");
+            oDiv1.style.background = "red";
+        }
+
+        function OnMouseOutFunction() {
+            var oDiv1 = document.getElementById("div1");
+            oDiv1.style.background = "yellow";
+        }
+    </script>
+</head>
+<body>
+<div id="div1" onmouseover="OnMouseOverFunction()" onmouseout="OnMouseOutFunction()">内容</div>
+</body>
+</html>

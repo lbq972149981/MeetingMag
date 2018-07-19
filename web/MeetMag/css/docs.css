@@ -1,0 +1,48 @@
+#class .loading-indicator {
+	FONT-SIZE: 12px; HEIGHT: 18px
+}
+#docs .x-layout-panel-north {
+	BORDER-RIGHT: 0px;
+	BORDER-TOP: 0px;
+	PADDING-LEFT: 0px;
+	BACKGROUND: url(../images/banner_bg.jpg) repeat-x;
+	BORDER-LEFT: 0px;
+	PADDING-TOP: 0px;
+	BORDER-BOTTOM: 0px;
+}
+#docs .x-layout-collapsed-west {
+	BACKGROUND-POSITION: center 50%; BACKGROUND-IMAGE: url(../images/collapse-bg.gif); BACKGROUND-REPEAT: no-repeat
+}
+/*#header {
+	COLOR: white; FONT-FAMILY: Tahoma, Verdana, Arial, Helvetica, sans-serif;PADDING: 0px; MARGIN: 0px;background-image: url(../images/banner.jpg);	background-repeat: no-repeat;	background-position: left top;background-color: #3FB2FB;
+}*/
+.loading-indicator {
+	BACKGROUND-POSITION: left top; PADDING-LEFT: 20px; FONT-SIZE: 8pt; BACKGROUND-IMAGE: url(../images/loading.gif); BACKGROUND-REPEAT: no-repeat; HEIGHT: 18px; TEXT-ALIGN: left
+}
+A#welcome-link {
+	PADDING-LEFT: 18px; BACKGROUND: url(../images/docs.gif) no-repeat 0px 0px
+}
+A#help-forums {
+	DISPLAY: block; PADDING-LEFT: 34px; BACKGROUND: url(../images/forum.gif) no-repeat 16px 0px
+}
+#loading {
+	BORDER-RIGHT: #6593cf 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: #6593cf 1px solid; PADDING-LEFT: 2px; Z-INDEX: 20001; BACKGROUND: #c3daf9; LEFT: 45%; PADDING-BOTTOM: 2px; BORDER-LEFT: #6593cf 1px solid; WIDTH: 150px; PADDING-TOP: 2px; BORDER-BOTTOM: #6593cf 1px solid; POSITION: absolute; TOP: 40%; TEXT-ALIGN: center
+}
+#loading .loading-indicator {
+	BORDER-RIGHT: #a3bad9 1px solid; PADDING-RIGHT: 10px; BORDER-TOP: #a3bad9 1px solid; PADDING-LEFT: 10px; BACKGROUND: url(../images/block-bg.gif) white repeat-x; PADDING-BOTTOM: 10px; MARGIN: 0px; FONT: bold 14px tahoma,arial,helvetica; BORDER-LEFT: #a3bad9 1px solid; COLOR: #003366; PADDING-TOP: 10px; BORDER-BOTTOM: #a3bad9 1px solid
+}
+#classes {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; OVERFLOW: auto; PADDING-TOP: 5px
+}
+#classes A SPAN {
+	FONT: 12px verdana,helvetica,tahoma,sans-serif
+}
+#classes .cls A:hover SPAN {
+	COLOR: #003366; TEXT-DECORATION: underline
+}
+#classes .x-tree-selected A SPAN {
+	BORDER-RIGHT: #99bbe8 1px dashed; BORDER-TOP: #99bbe8 1px dashed; BACKGROUND: #c3daf9; BORDER-LEFT: #99bbe8 1px dashed; COLOR: #000; BORDER-BOTTOM: #99bbe8 1px dashed
+}
+#classes .x-tree-selected A:hover SPAN {
+	COLOR: #000; TEXT-DECORATION: none
+}

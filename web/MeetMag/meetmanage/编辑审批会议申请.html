@@ -1,0 +1,135 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>编辑审批会议申请</title>
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<link href="../css/extremecomponents.css" rel="stylesheet" type="text/css">
+<SCRIPT language=javascript src="../js/common.js"></SCRIPT>
+<!-- 日历控件 -->
+<script language="javascript" type="text/javascript" src="../My97DatePicker/WdatePicker.js"></script>
+<!-- js分页 -->
+<Script Language="JavaScript" type="text/JavaScript" src="../js/Page.js"></Script>
+<!-- jQuery---双色表格 -->
+<script src="../js/jquery-1.2.2.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function(){  //这个就是传说的ready
+  $(".stripe tr").mouseover(function(){  //如果鼠标移到class为stripe的表格的tr上时，执行函数
+$(this).addClass("over");}).mouseout(function(){   //给这行添加class值为over，并且当鼠标一出该行时执行函数
+					$(this).removeClass("over");})  //移除该行的class
+  $(".stripe tr:even").addClass("alt");  //给class为stripe的表格的偶数行添加class值为alt
+});
+</script>
+</head>
+<body>
+<!-- 当前位置div -->
+<div id="place"><img src="../images/place_ico.gif" width="31" height="22" align="absmiddle" />当前位置： 行政办公 >> 公共事务管理 >> 会议管理</div>
+<!-- 特殊页面所需要的帮助按钮div（如不需要可删除） -->
+<div id="help" align="right"><img src="../images/help_ico.gif" alt="帮助" style="CURSOR:pointer" /></div>
+<!-- 内容区（控制所包含的div和table的宽度，包含在其中的div不用设宽度，默认即可，table的宽度设成100%。）-->
+<div id="content">
+<!-- 列表主标题div -->
+<div class="mainTitle"><img src="../images/bt1_ico.gif" width="31" height="23" align="absmiddle" />编辑审批会议申请</div>
+<!-- 查询条件列表 -->
+<table class="tableClass" width="100%" border="0" cellPadding="0" cellspacing="1">
+  <form class="formClass" name="myform" action="" method="post" target="_blank">
+    <tbody>
+     <tr>
+        <td class="tdLabel" width="15%"><span class="required">*</span>
+          <label class="label">会议类型：</label></td>
+        <td class="tdInput" width="35%">
+		<select name="tgjg" >
+            <option value="01">年会</option>
+            <option value="02" selected>专业会议</option>
+			<option value="03">专题会议</option>
+            <option value="04">代表会议</option>
+			<option value="05">研讨会</option>
+            <option value="06">培训会议</option>
+			<option value="07">奖励会议</option>
+            <option value="08">新闻发布会</option>
+            <option value="09">==================</option>
+          </select>		  </td>
+        <td class="tdLabel" width="18%"><span class="required">*</span>
+        <label class="label">会议名称：</label></td>
+        <td class="tdInput" width="32%"><input  name="TM" value="学习十七大报告"></td>
+      </tr>
+      <tr>
+        <td class="tdLabel" ><span class="required">*</span>
+          <label class="label">会议主持人：</label></td>
+        <td class="tdInput"><input  name="TM" value="李强"></td>
+        <td class="tdLabel" ><span class="required">*</span>
+          <label class="label">紧急程度：</label></td>
+        <td class="tdInput" align="left"><select name="select" >
+          <option value="01">特急</option>
+          <option value="02" >紧急</option>
+          <option value="02" selected>普通</option>
+          <option value="03">==================</option>
+        </select></td>
+      </tr>
+      <tr>
+	  <td class="tdLabel" ><span class="required">*</span>
+          <label class="label">会议时间：</label></td>
+        <td class="tdInput"><input name="CFDD" value="2008-05-01"></td>
+        <td class="tdLabel" ><span class="required">*</span>
+          <label class="label">会议起草人：</label></td>
+        <td class="tdInput" align="left">
+		<input  id="d4321" value="王坤"/></td>
+      </tr>
+      <tr>
+        <td class="tdLabel" ><span class="required">*</span>
+          <label class="label">与会领导：</label></td>
+        <td class="tdInput"><input name="CFDD2" value="赵光良、王强">
+        <input name="选择1" align="middle" type="image" src="../images/btnChoice.gif"  alt="单击此按钮，选择与会领导" />		</td>
+        <td class="tdLabel" ><span class="required">*</span>
+          <label class="label">主要参加人员：</label></td>
+        <td class="tdInput" align="left">
+		<input name="CJRY"  id="d4321" value="马小华" />
+		<input name="选择2" align="middle" type="image" src="../images/btnChoice.gif"  alt="单击此按钮，选择参加人员" />		</td>
+      </tr>
+	   <tr>
+        <td class="tdLabel" >
+          <label class="label">召集部门：</label></td>
+        <td class="tdInput" >
+		<input  id="d4321" value="行政处"/>
+		<input name="选择3" align="middle" type="image" src="../images/btnChoice.gif"  alt="单击此按钮，选择召集部门" /></td>
+		<td class="tdLabel" ><span class="required">*</span>		  
+	      <label class="label">审批流程：</label></td>
+        <td class="tdInput" ><input name="CFDD">
+         <input name="选择32" align="middle" type="image" src="../images/btnChoice.gif"  alt="单击此按钮，选择审批流程" /></td>
+      </tr>
+	   <tr>
+        <td class="tdLabel">会议主题：</td>
+        <td class="tdInput"><textarea name="textarea" cols="26" rows="4"  class="textareaClass">十七大学习报告</textarea></td>
+        <td class="tdLabel">会议内容：</td>
+        <td class="tdInput"><textarea name="textarea2" cols="26" rows="4"  class="textareaClass">中国共产党第十七次代表大会10月15日召开,这是我们党和国家的重大政治事件，会议将要总结党的十六大以来的工作成绩，并对关乎党和国家未来前途命运的重大问题作出战略部署，由此引起了国内外的广泛关注。
+　　十七大的召开是我国人民政治生活中的一件大事，直接连着你和我，因为我们都是“地球村”的公民，我们都是中国社会的一员，我们都是身处于同一国度，可能你和我都是中国共产党的党员呢，有责任关心十七大的召开，有义务学习、宣传、贯彻好十七大精神。</textarea></td>
+      </tr>
+	  <tr>
+        <td class="tdLabel">
+          <label class="label">会议日程安排：</label></td>
+        <td class="tdInput" ><input name="CFDD"></td>
+		<td class="tdLabel">审批人：</td>
+	    <td class="tdInput"><input name="QZMC" value="李霞"></td>
+      </tr>
+	  	  <tr>
+	  <td class="tdLabel">审批状态：</td>
+	  <td class="tdInput">
+	  <select name="CLBS" >
+	  <option value="01">审批通过</option>
+	  <option value="02" selected>审批不通过</option>
+	  <option value="03">==================</option>
+	  </select>	   </td>
+	  <td class="tdLabel">审批意见：</td>
+	  <td class="tdInput"><textarea name="clyj" rows="2"  class="textareaClass">请修改</textarea></td>
+	  </tr>
+    </tbody>
+  </form>
+</table>
+<!-- 查询条件列表所用的按钮 -->
+<div class="queryButton">
+  <input name="修改" type="image" src="../images/btnConfirm.gif"  alt="单击此按钮，审批会议申请" />
+  &nbsp;&nbsp;&nbsp;&nbsp;
+<a href="审批会议申请.html"><img src="../images/btnBack.gif"  alt="单击此按钮，返回上一页" name="查看使用费用" border="0" type="image" /></a></div>
+<div class="space"></div>
+<div class=eXtremeTable> </div>
+</body>
+</html>

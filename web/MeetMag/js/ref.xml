@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="GB2312" ?>
+<root text="ROOT" >
+	<menu id="10a"  text="计算机技术" width="180" over-text-color="blue" opened="true">
+	</menu>
+	<menu id="5b"  leafImage="images/r_write.gif"  text="箐箐校园">
+		<menu  id="51c" href="index.htm" leafImage="images/r_write.gif"  text="闪亮的日子"></menu>
+	</menu>
+</root>

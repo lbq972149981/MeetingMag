@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OnChange</title>
+    <script>
+        function OnChangeFunction() {
+            var oText = document.getElementById("t1");
+            t1.value = t1.value.toUpperCase();
+        }
+    </script>
+</head>
+<body>
+<label for="t1">英文名:</label><input type="text" id="t1" onchange="OnChangeFunction()"/>
+</body>
+</html>

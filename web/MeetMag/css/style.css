@@ -1,0 +1,604 @@
+/*head start*/
+#header {
+	background-image: url(../images/banner.jpg);
+	background-repeat: no-repeat;
+	background-position: left top;
+/*	height: 61px;*/
+	PADDING: 0px; 
+	MARGIN: 0px;
+}
+
+#header_bg {
+	background-image: url(../images/banner_bg.jpg);
+	background-repeat: repeat-x;
+	background-position: left top;
+/*	height: 61px;*/
+	PADDING: 0px; 
+	MARGIN: 0px;
+}
+.userL {
+	background-image: url(../images/users1.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+	height: 20px;
+	width: 5px;
+}
+.userR {
+	background-image: url(../images/users3.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+	height: 20px;
+	width: 5px;
+}
+
+#header div {
+	font-size: 12px;
+	color: #E4EEFE;
+}
+#date {
+	text-align: right;
+	line-height: 28px;
+	color: #E4EEFE;
+}
+.dateColor {
+	color: #E4EEFE;
+}
+.users {
+	background-image: url(../images/users2.gif);
+	background-repeat: repeat-x;
+	background-position: left top;
+	text-align: center;
+	padding-top: 4px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	color: #C2DCF2;
+}
+a.headerlink:link,a.headerlink:visited,a.headerlink:hover,a.headerlink:active{
+	color: #C2DCF2;
+	text-decoration: none;
+}
+a.headerlink:hover{
+	color: #FFFFFF;
+	text-decoration: none;
+	font-weight: bold;
+}
+/*head end*/
+
+/*菜单*/
+#menu_bg {
+	height: 26px;
+	background-image: url(../images/menu_bg.jpg);
+	background-repeat: repeat-x;
+	background-position: left top;
+}
+#menu_bg table {
+	font-size: 12px;
+	line-height: 25px;
+	font-weight: bold;
+	margin: 0px;
+}
+A.menu:link,A.menu:visited,A.menuhome:link,A.menuhome:visited {
+	COLOR: #DEEEF1;
+	TEXT-DECORATION: none;
+	background-image: url(../images/menu_off.jpg);
+	background-repeat: no-repeat;
+	display: block;
+	position: relative;
+	width: 100px;
+	background-position: left top;
+	text-indent: 30px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-right-color: #1f4c8c;
+	border-bottom-color: #073980;
+	border-left-color: #4eade5;
+}
+A.menu:hover,A.menu:active,A.menuhome:hover,A.menuhome:active {
+	color: #07367F;
+	background-image: url(../images/menu_on.jpg);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+A.menuhome:link,A.menuhome:visited {
+	width: 80px;
+}
+/* 所有页面需应用的基础样式 */
+/*字体：宋体*/
+* {font-family: "宋体"! important;}
+/* 页面边距:0px */
+body {
+	margin: 0px;
+	padding: 0px;
+}
+/* 字号:12px */
+body,td,tr,p,table,input,select {
+	font-size: 12px;
+}
+/* label的样式 */
+.label {
+	font-size: 12px;
+	color: #000000;
+	text-align: right;
+	font-style: normal;
+	font-weight: normal;
+}
+/* lable的td样式 */
+.tdLabel {
+	font-size: 12px;
+	color: #000000;
+	background-color: #F8F8F8;
+	text-align: right;
+	padding: 3px;
+}
+/* 必须输入项“*号”的样式 */
+.required {
+	font-size: 12px;
+	color: #FF0000;
+	margin-right: 5px;
+}
+/* input的td样式 */
+.tdInput {
+	background-color: #FFFFFF;
+	padding: 3px;
+}
+/* text的样式 */
+.textClass {
+	font-size: 12px;
+	color: #000000;
+	background-color: #FFFFFF;
+	border: 1px solid #7F9DB9;
+}
+/* textarea控件的样式 */
+.textareaClass {   
+	background-color: #FFFFFF;
+	border: 1px solid #7F9DB9;
+
+}   
+/* button控件的样式 */
+.buttonClass {
+	FONT-SIZE: 12px;
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#ffffff, EndColorStr=#C3DAF5);
+	CURSOR: hand;
+	COLOR: black;
+	padding-top: 2px;
+	padding-right: 2px;
+	padding-left: 2px;
+	border: 1px solid #2C59AA;
+}
+/* select控件的样式 */
+.selectClass {
+	font-size: 12px;
+	color: #000000;
+	background-color: #FFFFFF;
+	border: 1px solid #7F9DB9;
+}
+/* radio控件的样式 */
+.radioClass {
+
+}
+/* 针对于导向按钮的样式，例如“>”、“<”等按钮 */
+.btnClass {
+	FONT-SIZE: 12px;
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#ffffff, EndColorStr=#FEC570);
+	CURSOR: hand;
+	COLOR: #990000;
+	padding-top: 3px;
+	padding-right: 2px;
+	padding-left: 2px;
+	border: 1px solid #C64F00;
+}
+/* form控件的样式 */
+.formClass {
+	margin: 0px;
+	padding: 0px;
+}
+/* file控件的样式 */
+.fileClass {
+
+}
+/* checkbox控件的样式 */
+.checkboxClass {
+
+}
+/* table控件的样式，此table用于填写各个输入框 */
+.tableClass {
+	background-color: #ACA899;
+}
+/* 超链接样式 */
+a.linkClass:link,a.linkClass:visited,a.linkClass:active {
+	font-size: 12px;
+	color: #01338B;
+	text-decoration: underline;
+}
+a.linkClass:hover {
+	color: #CC3300;
+	text-decoration: none;
+}
+/* 出错label的样式 */
+.errorLabel {
+	color: #FF0000;
+	font-size: 14px;
+}
+/* 出错信息的span样式 */
+.errorMessage {
+	font-size: 14px;
+	color: #FF0000;
+}	
+
+
+
+
+/* 出错信息div的样式(即：弹出错误信息框的样式) */
+/* 出错信息div的背景和尺寸样式 */
+#error {
+	background-image: url(../images/error_bg.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+	height: 228px;
+	width: 400px;
+}
+/* 出错信息div的标题背景样式 */
+.errorTitleBg {
+	background-image: url(../images/error_title_ico.gif);
+	background-repeat: no-repeat;
+	background-position: 10px 5px;
+	height: 29px;
+}
+/* 出错信息div的标题样式 */
+.errorTitle {
+	font-size: 12px;
+	color: #FFFFFF;
+	text-indent: 30px;
+	font-weight: bold;
+}
+/* 出错信息div的关闭按钮样式 */
+.errorCancle {
+	width: 35px;
+	text-align: left;
+}
+/* 出错信息div包含的table样式 */
+.errorMessagetable {
+	height: 155px;
+	width: 98%;
+}
+/* 出错信息图标的样式，应用在td里 */
+.errorMessageImg{
+	background-image: url(../images/error_message_ico.gif);
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 80px;
+}
+/* 出错信息button所在层的样式 */
+#errorButton {
+	float: right;
+	padding-top: 8px;
+	padding-right: 30px;
+}
+
+
+/* 出错页面的样式（应用到无法挽回的错误或系统错误的页面样式） */
+/* 出错页面的背景和尺寸样式 */
+.errorPageBg {
+	background-image: url(../images/error_page_bg.jpg);
+	background-repeat: no-repeat;
+	background-position: left top;
+	height: 238px;
+	width: 565px;
+	margin-top: 100px;
+}
+/* 出错页面中信息所在td的样式 */
+.errorPagetd {
+	text-indent: 185px;
+}
+
+
+
+/* 目录树背景样式 */
+.tree_bg {
+	background-image: url(../menu/images/bg3.gif);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+}
+
+
+/* 当前位置所在层的样式 */
+#place {
+	font-size: 12px;
+	line-height: 22px;
+	color: #000000;
+	background-image: url(../images/place_bg.gif);
+	background-repeat: repeat-x;
+	background-position: left top;
+	border-bottom-width: 1px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: solid;
+	border-left-style: none;
+	border-bottom-color: #98C0F4;
+}
+/* 特殊页面所需要的帮助按钮div的样式 */
+#help {
+	align: right;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 96%;
+	margin-top: 3px;
+}
+
+
+/* 功能按钮所在div的样式*/
+.btn_mousebg {
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#EFEFEF, EndColorStr=#ffffff);
+	height: 35px;
+	border: 1px solid #E1E1E1;
+	margin-top: 5px;
+	margin-bottom: 4px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+}
+/*button缺省样式*/
+.btn_mouseout {
+	PADDING-RIGHT: 8px;
+	PADDING-LEFT: 2px;
+	FONT-SIZE: 12px;
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#ffffff, EndColorStr=#C3DAF5);
+	CURSOR: hand;
+	COLOR: black;
+	PADDING-TOP: 2px;
+	border: 1px solid #2C59AA;
+	letter-spacing: 1px;
+}
+/*button鼠标指向样式*/
+.btn_mouseover {
+	PADDING-RIGHT: 8px;
+	PADDING-LEFT: 2px;
+	FONT-SIZE: 12px;
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#ffffff, EndColorStr=#D7E7FA);
+	CURSOR: hand;
+	COLOR: black;
+	PADDING-TOP: 2px;
+	border: 1px solid #2C59AA;
+	letter-spacing: 1px;
+	font-weight: bold;
+}
+/*button鼠标点击样式*/
+.btn_mousedown{
+	PADDING-RIGHT: 8px;
+	PADDING-LEFT: 2px;
+	FONT-SIZE: 12px;
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#ffffff, EndColorStr=#C3DAF5);
+	CURSOR: hand;
+	COLOR: black;
+	PADDING-TOP: 2px;
+	font-weight: bold;
+	border: 1px solid #FFE400;
+}
+/*button鼠标点击后样式*/
+.btn_mouseup {
+	PADDING-RIGHT: 8px;
+	PADDING-LEFT: 2px;
+	FONT-SIZE: 12px;
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#ffffff, EndColorStr=#C3DAF5);
+	CURSOR: hand;
+	COLOR: black;
+	PADDING-TOP: 2px;
+	font-weight: bold;
+	border: 1px solid #2C59AA;
+}
+/*button图片样式*/
+.btn_mouseout img,.btn_mouseover img,.btn_mousedown img,.btn_mouseup img{
+	padding: 0px;
+	border: none;
+	width: 16px;
+	height: 16px;
+	margin-top: 0px;
+	margin-right: 8px;
+	margin-bottom: -3px;
+	margin-left: 0px;
+}
+/*button去空白*/
+button{
+	border-width: 0px; 
+	overflow: visible;
+}
+
+
+
+
+/* 控制内容区中所包含div和table的宽度 */
+#content {
+	align: center;
+	margin-left: 15px;
+	margin-right: 15px;
+	width: 100%;
+	margin-top: 10px;
+}
+/* 内容区所在主标题div的样式 */
+.mainTitle {
+	font-size: 12px;
+	font-weight: bold;
+	color: #01338B;
+	background-image: url(../images/bt1_bg.gif);
+	background-repeat: repeat-x;
+	height: 23px;
+	margin-top: 5px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 3px;
+}
+/* 编辑页面标题div的样式 */
+.editTitle {
+	font-size: 14px;
+	font-weight: bold;
+	color: #2D4F9F;
+	line-height: 26px;
+	letter-spacing: 2px;
+	text-align: center;
+	background-image: url(../images/editTitleBg.jpg);
+	background-repeat: repeat-x;
+	background-position: left top;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #ACA899;
+	border-right-color: #ACA899;
+	border-bottom-color: #FFFFFF;
+	border-left-color: #ACA899;
+}
+/* 查询条件列表所用的按钮div的样式 */
+.queryButton {
+	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#ffffff, EndColorStr=#ECF3F9);
+	height: 25px;
+	padding-top: 5px;
+	text-align: center;
+	border: 1px solid #CCE0EF;
+	margin-top: 3px;
+}
+/* 空白间隔div的样式（如：查询条件列表与查询结果列表之间的间隔）*/
+.space {
+	height: 10px;
+}
+/* page跳转文本框的样式 */
+.pageInput {
+	width: 30px;
+	font-size: 12px;
+	padding: 0px;
+	height: 15px;
+}
+/* 查询结果列表底部page所在div的样式 */
+.pageBottom {
+	padding-top: 3px;
+	height: 20px;
+}
+
+
+/* 查询结果列表信息样式 */
+/* 查询结果列表边框 */
+#queryResult {
+	background-color: #ACA899;
+}
+/* 查询结果列表td */
+#queryResult td {
+	padding:3px;
+	background-color: #FFFFFF;
+}
+/* 这行将给所有的tr加上背景色 */
+#queryResult tr.alt td {
+	background:#ecf6fc;  
+}
+/* 这个将是鼠标高亮行的背景色 */
+#queryResult tr.over td {
+	background:#bcd4ec;  
+}
+/* 查询结果列表所用的按钮div的样式 */
+.queryResultButton {
+	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#ffffff, EndColorStr=#ECF3F9);
+	height: 25px;
+	padding-top: 5px;
+	text-align: left;
+	border: 1px solid #CCE0EF;
+	margin-top: 3px;
+}
+
+/* eXtremeTable.css文件中的替换样式 */
+.eXtremeTable .title1 {
+	background-image: url(../images/search_bg.gif);
+	background-repeat: no-repeat;
+	background-position: left center;
+	height: 24px;
+	width: 160px;
+	font-size: 12px;
+	color: #000000;
+	text-indent: 33px;
+	letter-spacing: 1px;
+	line-height: 24px;
+	padding-top: 2px;
+}
+.eXtremeTable .tableHeader1 {
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#CCCAC1, EndColorStr=#ffffff);
+	color: #173366;
+	font-weight: bold;
+	text-align: left;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-top-color: #FFFFFF;
+	border-left-color: #FFFFFF;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	padding-left: 5px;
+	line-height: 18px;
+}
+.eXtremeTable .tableHeaderSort1 {
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#ABC7EC, EndColorStr=#ffffff);
+	color: #173366;
+	font-weight: bold;
+	text-align: left;
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-top-color: #FFFFFF;
+	border-left-color: #FFFFFF;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	text-decoration: underline;
+	padding-left: 5px;
+}
+/*div start*/
+.div_text {
+	font-size: 12px;
+	font-weight: bold;
+	color: #CC6600;
+	letter-spacing: 2px;
+	text-indent: 20px;
+	background-image: url(../images/btn_1.jpg);
+	background-repeat: no-repeat;
+	padding-top: 6px;
+}
+.div_text1 {
+	font-size: 12px;
+	color: #000000;
+	letter-spacing: 2px;
+	text-indent: 20px;
+	background-image: url(../images/btn_2.gif);
+	background-repeat: no-repeat;
+	padding-top: 6px;
+}
+a.div:link {
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+}
+a.div:visited {
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+}
+a.div:hover {
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+}
+/*div end*/

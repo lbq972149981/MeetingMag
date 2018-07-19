@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>12_js面向对象_非构造函数的继承_object方法</title>
+  <script>
+    /*什么是"非构造函数"的继承*/
+    /*现在有一个对象，叫做"中国人"*/
+    var Chinese = {
+      nation: "中国"
+    };
+    Chinese.birthPlaces = ["北京", "上海", "香港"];
+    /*还有一个对象，叫做"医生"*/
+    /*var Doctor = {
+      career: "医生"
+    };*/
+    /*如何让"医生"去继承"中国人",生成一个"中国医生"对象*/
+    /*这里要注意，这两个对象都是普通对象，不是构造函数，无法使用构造函数方法实现"继承"。*/
+
+    function object(o) {
+      function F() {}
+      F.prototype = o;
+      return new F();
+    }
+
+    /*这个object()函数，其实只做一件事，就是把子对象的prototype属性，指向父对象，从而使得子对象与父对象连在一起。*/
+    /*使用的时候如下例子*/
+    /*第一步先在父对象的基础上，生成子对象*/
+    var Doctor = object(Chinese);
+    /*然后，再加上子对象本身的属性：*/
+    Doctor.career = "医生";
+    /*这时，子对象已经继承了父对象的属性了。*/
+    Doctor.birthPlaces.push("哈尔滨");
+    alert(Doctor.birthPlaces);
+    alert(Chinese.birthPlaces);
+  </script>
+</head>
+<body>
+</body>
+</html>

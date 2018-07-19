@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>中央电视台基础应用系统</title>
+<meat http-equiv=Content-Type content="text/html; charset=gb2312"> 
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+</head>
+<frameset rows="100,*" cols="*" frameborder="NO" border="0" framespacing="0"><!--页头-->
+  <frame src="header.html" name="header" frameborder="no" scrolling="NO" noresize marginwidth="0" marginheight="0" id="header" >
+
+
+  <frameset id=fmain style="corsor: auto" border=0 name=fmain frameSpacing=0 frameBorder=no cols="160, 10, *">
+    <!--页左-->
+    <frame src="menu/tree_menus.html" name=navigation scrolling="no" noResize marginWidth=0 marginHeight=0 id="Navigation Area">
+
+<frame name=f5 marginWidth=0 marginHeight=0 src="f5.html" frameBorder=no noResize scrolling=no><!--页控制-->
+
+<frameset rows="*,15" frameborder="NO" border="0" framespacing="0">
+  <frame id=body name=body marginWidth=0 marginHeight=0 src="content.html" noResize>
+  <frame src="footer.html" name="footer" scrolling="NO" noresize id="footer">
+</frameset>
+  </frameset>
+</frameset>
+<noframes></noframes>
+</html>

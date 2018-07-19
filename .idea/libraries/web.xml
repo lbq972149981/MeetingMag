@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="web">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../WebClient/web/WEB-INF/lib/08221539430.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../WebClient/web/WEB-INF/lib/commons-fileupload-1.3.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../WebClient/web/WEB-INF/lib/commons-io-2.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../WebClient/web/WEB-INF/lib/ojdbc6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../WebClient/web/WEB-INF/lib/servlet-api.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../WebClient/web/WEB-INF/lib/tomcat-api.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/jsp-api.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../WebClient/web/WEB-INF/lib/commons-fileupload-1.3.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

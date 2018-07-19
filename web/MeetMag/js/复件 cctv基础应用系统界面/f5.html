@@ -1,0 +1,25 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>无标题文档</title>
+<script language=javascript type=text/javascript>
+function changeLeft(){    frmElem=window.parent.document.getElementById("fmain");
+if (frmElem.cols != "0, 10, *") {	frmElem.cols = "0, 10, *";
+Elem=document.getElementById('menuSwitch')
+Elem.innerHTML="<img src=\"images/fopen.gif\">";
+} else {	frmElem.cols = "160, 10, *";
+Elem=document.getElementById('menuSwitch')
+Elem.innerHTML="<img src=\"images/fclose.gif\">";
+}}
+</script>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body id="midbar" background="images/f5_bg.gif">
+<table style="CURSOR: pointer" height="100%" cellSpacing=0 cellPadding=0 width="100%" border="0">
+<tbody>
+<tr>
+      <td id="menuSwitch" onClick="changeLeft()" height="100%"><IMG src="images/fclose.gif" width="9" height="102" >      </td>
+    </tr></tbody></table>
+</body>
+</html>

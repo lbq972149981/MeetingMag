@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Class</title>
+  <script>
+    var Cat = function (name,color) {
+        this.name = name;
+        this.color = color;
+    };
+    Cat.prototype.type = "猫动物";
+    Cat.prototype.eat = function () {
+      alert("吃老鼠");
+    };
+    var cat1 = new Cat("small","red");
+    var cat2 = new Cat("big","blue");
+    alert(cat1 instanceof Cat);
+    alert(cat1.constructor)
+    alert(cat1.constructor==Cat);
+
+    alert(cat1.name);
+    alert(cat1.color);
+    alert(cat1.type);
+    alert(cat1.eat);
+    for (var value in cat1){
+        alert("cat1["+value+"]"+"="+cat1[value]);
+    }
+    alert(cat1.hasOwnProperty("type"));//false
+    alert(cat1.hasOwnProperty("name"));//true
+    alert("name" in cat1);
+    alert(Cat.prototype.isPrototypeOf(cat1));
+  </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>14_js面向对象_非构造函数的继承_深拷贝</title>
+  <script>
+    /*现在有一个对象，叫做"中国人"*/
+    var Chinese = {
+      nation: "中国"
+    };
+    /*还有一个对象，叫做"医生"*/
+    /*var Doctor = {
+     career: "医生"
+     };*/
+    /*所谓"深拷贝"，就是能够实现真正意义上的数组和对象的拷贝。
+    它的实现并不难，只要递归调用"浅拷贝"就行了。*/
+    function deepCopy(p, c) {
+      /*function(c){
+       if(c === 0 || c === "" || c === false || c === null || c === undefined) c = {}
+       }*/
+      //alert(c);
+      var c = c || {};
+      for (var i in p) {
+        if(typeof p[i] === "object") {
+          c[i] = (p[i].constructor === Array) ? [] : {};
+          deepCopy(p[i], c[i]);
+        } else {
+          c[i] = p[i];
+        }
+      }
+      return c;
+    }
+    /*使用的时候如下例子*/
+    /*现在，给父对象加一个属性，值为数组。然后，在子对象上修改这个属性：*/
+    Chinese.birthPlaces = ["北京", "上海", "香港"];
+    var Doctor = deepCopy(Chinese);
+    Doctor.birthPlaces.push("哈尔滨");
+
+    alert(Doctor.birthPlaces); //北京, 上海, 香港, 哈尔滨
+    alert(Chinese.birthPlaces); //北京, 上海, 香港
+  </script>
+</head>
+<body>
+
+</body>
+</html>
